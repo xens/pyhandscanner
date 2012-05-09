@@ -27,4 +27,5 @@ scanners.
 - sudo make
 - sudo make install
 
-test crikey: crikey "hello", should write "hello" in the console
+test crikey: 
+- crikey "hello" (should write "hello" in the console)
