@@ -16,4 +16,15 @@ scanners.
 - Bluetooth dongle
 - crikey software installed (used to display the bar-code to the selected windows)
 
+## Install
 
+### Ubuntu
+- sudo apt-get install libx11-dev x11proto-xext-dev libxt-dev libxtst-dev
+- cd /usr/src
+- sudo wget http://www.shallowsky.com/software/crikey/crikey-0.8.3.tar.gz
+- sudo tar zxvf crikey-0.8.3.tar.gz
+- cd crikey-0.8.3
+- sudo make
+- sudo make install
+
+test crikey: crikey "hello", should write "hello" in the console
