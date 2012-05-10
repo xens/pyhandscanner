@@ -62,7 +62,9 @@ rfcomm0 {
 }
 
     /etc/init.d/bluetooth restart
-    rfcomm -> should return the following:
+    
+rfcomm -> should return the following:
+    
     rfcomm0: 00:0C:A7:00:90:6C channel 1 closed
 
 
