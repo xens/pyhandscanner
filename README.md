@@ -38,7 +38,7 @@ Scan the Bluetooth devices and scan the available options for the device
 
 In my case:
 
----
+
 xens@testvm:~$ sdptool browse 00:0C:A7:00:90:6C
 Browsing 00:0C:A7:00:90:6C ...
 Service Name: Serial Port
