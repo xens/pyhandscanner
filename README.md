@@ -34,10 +34,11 @@ test crikey:
 ### Bluetooth specific
 Scan the Bluetooth devices and scan the available options for the device:
 
-    hcitool scan
-    sdptool browse 00:0C:A7:00:90:6C
 
-In my case:
+    xens@testvm:~$  hcitool scan
+    Scanning ...
+        00:0C:A7:00:90:6C	VoyagerBT 5604210356
+
 
     xens@testvm:~$ sdptool browse 00:0C:A7:00:90:6C
     Browsing 00:0C:A7:00:90:6C ...
@@ -49,7 +50,6 @@ In my case:
       "L2CAP" (0x0100)
       "RFCOMM" (0x0003)
         Channel: 1
-
 
 So here it's the channel 1
 
