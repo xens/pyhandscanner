@@ -13,7 +13,8 @@ scanners.
 
 ## Requirements 
 - Bluetooth or serial scanner
-- Bluetooth dongle
+- optional: Bluetooth stack (bluez)
+- optional: Bluetooth dongle
 - crikey software installed (used to display the bar-code to the selected windows)
 
 ## Install
@@ -29,3 +30,40 @@ scanners.
 
 test crikey: 
 - crikey "hello" (should write "hello" in the console)
+
+### Bluetooth specific
+- hcitool scan -> should detect your scanner with the MAC address
+- sdptool browse 00:0C:A7:00:90:6C (<- your MAC) <- should return the available channels.
+
+In my case:
+
+---
+xens@testvm:~$ sdptool browse 00:0C:A7:00:90:6C
+Browsing 00:0C:A7:00:90:6C ...
+Service Name: Serial Port
+Service RecHandle: 0x10000
+Service Class ID List:
+  "Serial Port" (0x1101)
+Protocol Descriptor List:
+  "L2CAP" (0x0100)
+  "RFCOMM" (0x0003)
+    Channel: 1
+---
+
+So here it's the channel 1
+- edit /etc/bluetooth/rfcomm.conf -> And put your settings in it
+
+rfcomm0 {
+	bind yes;
+	device 00:0C:A7:00:90:6C;
+	channel	1;
+	comment "Metrologic Voyager";
+}
+
+- /etc/init.d/bluetooth restart
+- rfcomm -> should return the following:
+rfcomm0: 00:0C:A7:00:90:6C channel 1 closed
+
+
+
+
