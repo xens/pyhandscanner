@@ -30,7 +30,7 @@ Install crikey:
     sudo make
     sudo make install
 
-test crikey: (should write "hello" in the console)
+test crikey: (should write "hello" in the console):
     crikey "hello" 
 
 ### Bluetooth specific
