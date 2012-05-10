@@ -36,9 +36,11 @@ test crikey (should write "hello" in the console):
     crikey "hello" 
 
 download pyhandscanner:
+
     git clone https://xens@github.com/xens/pyhandscanner.git
 
 copy and make pyhandscanner executable:
+
     cd pyhandscanner
     cp pyhandscanner /usr/local/bin
     chmox +x /usr/local/bin/pyhandscanner
