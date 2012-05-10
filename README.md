@@ -32,9 +32,9 @@ test crikey:
     crikey "hello" (should write "hello" in the console)
 
 ### Bluetooth specific
-    * should detect your scanner with the MAC address
+should detect your scanner with the MAC address
     hcitool scan -> 
-    * should return the available channels.
+ return the available channels.
     sdptool browse 00:0C:A7:00:90:6C (<- your MAC)
 
 In my case:
