@@ -20,20 +20,22 @@ scanners.
 ## Install
 
 ### Ubuntu
-- sudo apt-get install libx11-dev x11proto-xext-dev libxt-dev libxtst-dev
-- cd /usr/src
-- sudo wget http://www.shallowsky.com/software/crikey/crikey-0.8.3.tar.gz
-- sudo tar zxvf crikey-0.8.3.tar.gz
-- cd crikey-0.8.3
-- sudo make
-- sudo make install
+    sudo apt-get install libx11-dev x11proto-xext-dev libxt-dev libxtst-dev
+    cd /usr/src
+    sudo wget http://www.shallowsky.com/software/crikey/crikey-0.8.3.tar.gz
+    sudo tar zxvf crikey-0.8.3.tar.gz
+    cd crikey-0.8.3
+    sudo make
+    sudo make install
 
 test crikey: 
-- crikey "hello" (should write "hello" in the console)
+    crikey "hello" (should write "hello" in the console)
 
 ### Bluetooth specific
-- hcitool scan -> should detect your scanner with the MAC address
-- sdptool browse 00:0C:A7:00:90:6C (<- your MAC) <- should return the available channels.
+    *should detect your scanner with the MAC address
+    hcitool scan -> 
+    *should return the available channels.
+    sdptool browse 00:0C:A7:00:90:6C (<- your MAC)
 
 In my case:
 
