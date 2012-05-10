@@ -46,6 +46,7 @@ copy and make pyhandscanner executable:
     chmox +x /usr/local/bin/pyhandscanner
     
 test:
+
     pyhandscanner -d /dev/yourSerialPort
 
 
