@@ -52,18 +52,21 @@ In my case:
 
 
 So here it's the channel 1
-- edit /etc/bluetooth/rfcomm.conf -> And put your settings in it
 
-rfcomm0 {
-	bind yes;
-	device 00:0C:A7:00:90:6C;
-	channel	1;
-	comment "Metrologic Voyager";
-}
+edit /etc/bluetooth/rfcomm.conf and put the following (with your settings):
+
+	rfcomm0 {
+		bind yes;
+		device 00:0C:A7:00:90:6C;
+		channel	1;
+		comment "Metrologic Voyager";
+	}
+
+restart the bluetooth services:
 
     /etc/init.d/bluetooth restart
     
-rfcomm -> should return the following:
+rfcomm should return the following:
     
     rfcomm0: 00:0C:A7:00:90:6C channel 1 closed
 
