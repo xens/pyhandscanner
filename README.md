@@ -32,12 +32,12 @@ test crikey:
     crikey "hello" (should write "hello" in the console)
 
 ### Bluetooth specific
-Scan the Bluetooth devices and scan the available options for the device
+Scan the Bluetooth devices and scan the available options for the device:
+
     hcitool scan
     sdptool browse 00:0C:A7:00:90:6C
 
 In my case:
-
 
     xens@testvm:~$ sdptool browse 00:0C:A7:00:90:6C
     Browsing 00:0C:A7:00:90:6C ...
@@ -61,7 +61,7 @@ rfcomm0 {
 	comment "Metrologic Voyager";
 }
 
-/etc/init.d/bluetooth restart
+    /etc/init.d/bluetooth restart
     rfcomm -> should return the following:
     rfcomm0: 00:0C:A7:00:90:6C channel 1 closed
 
