@@ -39,17 +39,17 @@ Scan the Bluetooth devices and scan the available options for the device
 In my case:
 
 
-xens@testvm:~$ sdptool browse 00:0C:A7:00:90:6C
-Browsing 00:0C:A7:00:90:6C ...
-Service Name: Serial Port
-Service RecHandle: 0x10000
-Service Class ID List:
-  "Serial Port" (0x1101)
-Protocol Descriptor List:
-  "L2CAP" (0x0100)
-  "RFCOMM" (0x0003)
-    Channel: 1
----
+    xens@testvm:~$ sdptool browse 00:0C:A7:00:90:6C
+    Browsing 00:0C:A7:00:90:6C ...
+    Service Name: Serial Port
+    Service RecHandle: 0x10000
+    Service Class ID List:
+      "Serial Port" (0x1101)
+    Protocol Descriptor List:
+      "L2CAP" (0x0100)
+      "RFCOMM" (0x0003)
+        Channel: 1
+
 
 So here it's the channel 1
 - edit /etc/bluetooth/rfcomm.conf -> And put your settings in it
@@ -61,9 +61,9 @@ rfcomm0 {
 	comment "Metrologic Voyager";
 }
 
-- /etc/init.d/bluetooth restart
-- rfcomm -> should return the following:
-rfcomm0: 00:0C:A7:00:90:6C channel 1 closed
+/etc/init.d/bluetooth restart
+    rfcomm -> should return the following:
+    rfcomm0: 00:0C:A7:00:90:6C channel 1 closed
 
 
 
