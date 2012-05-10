@@ -33,9 +33,9 @@ test crikey:
 
 ### Bluetooth specific
 should detect your scanner with the MAC address
-    hcitool scan -> 
- return the available channels.
-    sdptool browse 00:0C:A7:00:90:6C (<- your MAC)
+    hcitool scan
+return the available channels.
+    sdptool browse 00:0C:A7:00:90:6C
 
 In my case:
 
