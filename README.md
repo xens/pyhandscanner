@@ -22,6 +22,7 @@ scanners.
 ### Ubuntu
 
 Install crikey:
+
     sudo apt-get install libx11-dev x11proto-xext-dev libxt-dev libxtst-dev
     cd /usr/src
     sudo wget http://www.shallowsky.com/software/crikey/crikey-0.8.3.tar.gz
@@ -30,7 +31,8 @@ Install crikey:
     sudo make
     sudo make install
 
-test crikey: (should write "hello" in the console):
+test crikey (should write "hello" in the console):
+
     crikey "hello" 
 
 ### Bluetooth specific
