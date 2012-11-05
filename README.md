@@ -1,10 +1,10 @@
 # pyhandscanner 
 
 ## About
-pyhandscanner connects to serial hand-held bare-code scanner and print the bar-code to stdout.
+pyhandscanner connects to serial hand-held barcode scanner and print the bar-code to stdout.
 
 ## History
-I have a Metrologic MS9535 Bluetooth hand-held scanner, the scanner connects to a base-station 
+I own a Metrologic MS9535 Bluetooth hand-held scanner, the scanner connects to a base-station 
 via Bluetooth, the base station is then connected via USB to the computer. Recently the base-station
 failed and the scanner was useless. I decided to connect the scanner directly to the computer via
 Bluetooth and bypass the base-station. I wrote this script to read the output of the scanner and
@@ -15,7 +15,7 @@ scanners.
 - Bluetooth or serial scanner
 - optional: Bluetooth stack (bluez)
 - optional: Bluetooth dongle
-- crikey software installed (used to display the bar-code to the selected windows)
+- crikey software installed (used to display the bar-code to the focused windows)
 
 ## Install
 
@@ -43,7 +43,7 @@ copy and make pyhandscanner executable:
 
     cd pyhandscanner
     cp pyhandscanner /usr/local/bin
-    chmox +x /usr/local/bin/pyhandscanner
+    chmod +x /usr/local/bin/pyhandscanner
     
 test:
 
@@ -88,8 +88,4 @@ restart the bluetooth services:
 rfcomm should return the following:
     
     rfcomm0: 00:0C:A7:00:90:6C channel 1 closed
-
-
-
-
-
+    
